@@ -18,7 +18,7 @@ test:
 production:
   <<: *default
   database: teste_tecnico_4_production_database
-  username: your_production_username
-  password: your_production_password
+  username: production_username
+  password: production_password
   host: your_production_host
   port: 5432

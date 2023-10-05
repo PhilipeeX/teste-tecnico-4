@@ -25,7 +25,7 @@ module Api
         end
         head :no_content, status: :ok
       else
-        render json: { error: 'Nenhum arquivo CSV fornecido.' }, status: :unprocessable_entity
+        render json: { error: I18n.t('controllers.api.read_csv.error') }, status: :unprocessable_entity
       end
     end
   end

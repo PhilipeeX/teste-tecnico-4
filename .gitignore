@@ -39,3 +39,4 @@
 
 # File of gem config (Gemfile.lock)
 Gemfile.lock
+/.rspec

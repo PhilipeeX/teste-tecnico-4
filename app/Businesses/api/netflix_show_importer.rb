@@ -12,13 +12,13 @@ module Api
         begin
           NetflixShow.create!(
             show_id: row['show_id'],
-            show_type: row['type'],
+            genre: row['type'],
             title: row['title'],
             director: row['director'],
             cast: row['cast'],
             country: row['country'],
-            date_added: row['date_added'],
-            release_year: row['release_year'],
+            published_at: row['date_added'],
+            year: row['release_year'],
             rating: row['rating'],
             duration: row['duration'],
             listed_in: row['listed_in'],

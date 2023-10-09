@@ -20,6 +20,18 @@ module Api
 
     def show_json
       @netflix_shows = NetflixShow.order(year: :desc)
+
+      if params[:year].present?
+        @netflix_shows = @netflix_shows.where(year: params[:year])
+      end
+
+      if params[:genre].present?
+        @netflix_shows = @netflix_shows.where(genre: params[:genre])
+      end
+
+      if params[:country].present?
+        @netflix_shows = @netflix_shows.where(country: params[:country])
+      end
       response = @netflix_shows.map do |show|
         {
           id: show.id,

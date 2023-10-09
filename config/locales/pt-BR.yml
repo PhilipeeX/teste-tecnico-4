@@ -1,0 +1,5 @@
+pt-BR:
+  controllers:
+    api:
+      read_csv:
+        error: "Nenhum arquivo CSV fornecido."

@@ -11,6 +11,7 @@ module Api
 
         begin
           NetflixShow.create!(
+            id: SecureRandom.uuid,
             show_id: row['show_id'],
             genre: row['type'],
             title: row['title'],

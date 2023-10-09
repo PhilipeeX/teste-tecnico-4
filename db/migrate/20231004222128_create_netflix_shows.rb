@@ -1,6 +1,6 @@
 class CreateNetflixShows < ActiveRecord::Migration[7.0]
   def change
-    create_table :netflix_shows do |t|
+    create_table :netflix_shows, id: :uuid do |t|
       t.string :show_id
       t.string :genre
       t.string :title

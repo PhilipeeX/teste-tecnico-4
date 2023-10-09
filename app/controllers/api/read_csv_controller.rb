@@ -24,7 +24,7 @@ module Api
         {
           id: show.id,
           title: show.title,
-          genre: show.genre,  # Certifique-se de que o modelo tenha um método genre ou show_type
+          genre: show.genre,
           year: show.year,
           country: show.country,
           published_at: show.published_at,

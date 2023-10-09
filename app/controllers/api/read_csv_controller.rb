@@ -18,6 +18,22 @@ module Api
       end
     end
 
+    def show_json
+      @netflix_shows = NetflixShow.order(year: :desc)
+      response = @netflix_shows.map do |show|
+        {
+          id: show.id,
+          title: show.title,
+          genre: show.genre,  # Certifique-se de que o modelo tenha um método genre ou show_type
+          year: show.year,
+          country: show.country,
+          published_at: show.published_at,
+          description: show.description
+        }
+      end
+      render json: response
+    end
+
   end
 end
 
